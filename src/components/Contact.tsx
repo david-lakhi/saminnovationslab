@@ -12,8 +12,44 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    
+    // Create form data for submission
+    const submitData = new FormData();
+    submitData.append('name', formData.name);
+    submitData.append('email', formData.email);
+    submitData.append('company', formData.company || 'Not specified');
+    submitData.append('service', formData.service || 'Not specified');
+    submitData.append('message', formData.message);
+    submitData.append('_to', 'saminnovation.org@gmail.com');
+    submitData.append('_subject', `New Inquiry from ${formData.name} - SAM Innovations Lab`);
+    submitData.append('_template', 'table');
+    
+    // Submit to Formspree
+    fetch('https://formspree.io/f/xdkogepv', {
+      method: 'POST',
+      body: submitData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Thank you! Your message has been sent successfully. We\'ll get back to you soon.');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Sorry, there was an error sending your message. Please try again or contact us directly at saminnovation.org@gmail.com');
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
