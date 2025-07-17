@@ -110,15 +110,15 @@ const Footer: React.FC = () => {
               <div className="space-y-3">
                 <div className="flex items-center text-gray-300">
                   <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                  hello@saminnovations.com
+                  saminnovation.org@gmail.com
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                  +1 (555) 123-4567
+                  +91 8847024002
                 </div>
                 <div className="flex items-center text-gray-300">
                   <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                  123 Innovation Drive, Tech City, TC 12345
+                  SCF 6 (2nd & 3rd Floor), Main Market, beside Ultimate Gym, Phase 11, Mohali, Punjab
                 </div>
               </div>
             </div>
@@ -181,7 +181,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-4 mb-4 md:mb-0">
               <p className="text-gray-400 text-sm">
-                © 2024 SAM Innovations Lab. All rights reserved.
+                © 2025 SAM Innovations Lab. All rights reserved.
               </p>
               <div className="flex items-center text-gray-400 text-sm">
                 <span>Made with</span>

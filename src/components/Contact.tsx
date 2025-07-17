@@ -27,19 +27,19 @@ const Contact: React.FC = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
-      details: "hello@saminnovations.com",
-      action: "mailto:hello@saminnovations.com"
+      details: "saminnovation.org@gmail.com",
+      action: "mailto:saminnovation.org@gmail.com"
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
-      action: "tel:+15551234567"
+      details: "+91 8847024002",
+      action: "tel:+918847024002"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Visit Us",
-      details: "123 Innovation Drive, Tech City, TC 12345",
+      details: "SCF 6 (2nd & 3rd Floor), Main Market, beside Ultimate Gym, Phase 11, Mohali, Punjab",
       action: "#"
     },
     {
